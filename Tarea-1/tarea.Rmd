@@ -8,7 +8,6 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 <style>
     * {
         font-family: serif;
@@ -27,7 +26,6 @@ knitr::opts_chunk$set(echo = TRUE)
         padding: 3px 25px;
         vertical-align: top;
     }
-    
     .b {
         text-align: center;
         padding: 3px 25px;
@@ -139,7 +137,7 @@ $$
 |                   $\theta_{3}$=200                   |      1,500     |      6,000     |
 
 ### 1.6 Dominación
-
+]
 Una acción está dominada por otra si los resultados de su implementación son al menos tan deseables como los resultados de otra acción pero, para al menos un estado de la naturaleza, es menos deseable. En tal caso, la acción es inadmisible y, por lo tanto, se puede eliminar de la lista de posibles decisiones sin afectar el resultado del proceso de decisión.
 
 En el ejemplo 1 se observa que la estrategia $a_{3}$ está dominada por la estrategia $a_{2}$:
