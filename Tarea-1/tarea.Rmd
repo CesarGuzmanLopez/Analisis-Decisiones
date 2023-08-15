@@ -36,7 +36,9 @@ knitr::opts_chunk$set(echo = TRUE)
 # UNIDAD 1
 
 ## INTRODUCCIÓN
+
 **Objetivo: Conocer la naturaleza, definición y elementos que constituyen un proceso de decisión.**  
+
 ### 1.1 ¿Qué es decidir?  
 Una persona tiene un problema de decisión cuando debe elegir un curso de acción específico entre un
 conjunto de acciones posibles, con el fin de alcanzar uno o más objetivos preestablecidos.
