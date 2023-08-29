@@ -12,9 +12,9 @@ calcular_ganancia <- function(demanda, pedido) {
   precio_compra_300 <- 85
   precio_remate <- 60
 
-  if (pedido < 100) {
+  if (pedido <= 100) {
     precio_compra <- precio_compra_100
-  } else if (pedido < 200) {
+  } else if (pedido <= 200) {
     precio_compra <- precio_compra_200
   } else {
     precio_compra <- precio_compra_300
@@ -35,13 +35,14 @@ calcular_ganancia <- function(demanda, pedido) {
 pedidos <- c(100, 200, 300)
 demandas <- c(100, 150, 200)
 
-tabla <- matrix(NA, nrow = length(pedidos), ncol = length(demandas))
-rownames(tabla) <- pedidos
-colnames(tabla) <- demandas
-
-for (i in 1:length(pedidos)) {
-  for (j in 1:length(demandas)) {
-    tabla[i, j] <- calcular_ganancia(demandas[j], pedidos[i])
+tabla <- matrix(NA, nrow = length(demandas), ncol = length(pedidos))
+#establecer los valores de las filas y comlumnas
+rownames(tabla) <- demandas
+colnames(tabla) <- pedidos
+#llenar la matriz deacuerdo a las demandas y pedidos
+for (i in 1:length(demandas)) {
+  for (j in 1:length(pedidos)) {
+    tabla[j, i] <- calcular_ganancia(demandas[j], pedidos[i])
   }
 }
 
