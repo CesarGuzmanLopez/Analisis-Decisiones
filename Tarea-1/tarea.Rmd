@@ -3,11 +3,16 @@
 author: "Cesar Guzman"
 date: "2023-07-10"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{=html}
 <style>
     * {
         font-family: serif;
@@ -31,130 +36,215 @@ knitr::opts_chunk$set(echo = TRUE)
         padding: 3px 25px;
     }
 </style>
+```
 # UNIDAD 1
 
 ## INTRODUCCIÓN
 
-**Objetivo: Conocer la naturaleza, definición y elementos que constituyen un proceso de decisión.**  
+**Objetivo: Conocer la naturaleza, definición y elementos que
+constituyen un proceso de decisión.**
 
-### 1.1 ¿Qué es decidir?  
-Una persona tiene un problema de decisión cuando debe elegir un curso de acción específico entre un
-conjunto de acciones posibles, con el fin de alcanzar uno o más objetivos preestablecidos.
+### 1.1 ¿Qué es decidir?
 
-El análisis y la toma de decisiones son la respuesta a un problema de decisión que se presenta generalmente como resultado de una discrepancia entre las condiciones existentes y las metas y objetivos del
-individuo o de una organización. Con el apoyo de la estadística, el _análisis de decisiones_ establece las
-normas que garanticen un proceso coherente al elegir un curso de acción.
+Una persona tiene un problema de decisión cuando debe elegir un curso de
+acción específico entre un conjunto de acciones posibles, con el fin de
+alcanzar uno o más objetivos preestablecidos.
 
-El conjunto de cursos de acción posibles ($a_{j}$) de entre los que se decidirá por uno debe agotar las posibilidades (debe ser _exhaustivo_) y la elección de una alternativa del conjunto debe excluir la elección de cualquiera otra (debe ser _exclusiva_). Cada acción posible tiene una _consecuencia_ o resultado que debe ser _cuantificable_ en unidades monetarias o en unidades de "utilidad".
+El análisis y la toma de decisiones son la respuesta a un problema de
+decisión que se presenta generalmente como resultado de una discrepancia
+entre las condiciones existentes y las metas y objetivos del individuo o
+de una organización. Con el apoyo de la estadística, el *análisis de
+decisiones* establece las normas que garanticen un proceso coherente al
+elegir un curso de acción.
 
-Se llama _suceso_, _evento_ o _estado_ de la _naturaleza_ ($\theta_i$) a un hecho que tiene lugar. Un suceso, evento o estado de la naturaleza sobre el que se sabe que tuvo o tendrá lugar se llama _suceso cierto_; de otra forma, se llama _suceso_, _evento_ o _estado de la naturaleza incierto_.
+El conjunto de cursos de acción posibles ($a_{j}$) de entre los que se
+decidirá por uno debe agotar las posibilidades (debe ser *exhaustivo*) y
+la elección de una alternativa del conjunto debe excluir la elección de
+cualquiera otra (debe ser *exclusiva*). Cada acción posible tiene una
+*consecuencia* o resultado que debe ser *cuantificable* en unidades
+monetarias o en unidades de "utilidad".
 
-En resumen, dada una lista de decisiones posibles $a_1, a_2, \ldots, a_m$, exhaustiva y exclusiva, el problema de decisión consiste en elegir un elemento (y sólo uno) de esa lista, como el mejor en algún sentido y, por lo tanto, como la forma de actuación que debe adoptarse. La facilidad o dificultad en la selección de la mejor decisión generalmente se debe al grado de incertidumbre presente en la situación.
+Se llama *suceso*, *evento* o *estado* de la *naturaleza* ($\theta_i$) a
+un hecho que tiene lugar. Un suceso, evento o estado de la naturaleza
+sobre el que se sabe que tuvo o tendrá lugar se llama *suceso cierto*;
+de otra forma, se llama *suceso*, *evento* o *estado de la naturaleza
+incierto*.
+
+En resumen, dada una lista de decisiones posibles
+$a_1, a_2, \ldots, a_m$, exhaustiva y exclusiva, el problema de decisión
+consiste en elegir un elemento (y sólo uno) de esa lista, como el mejor
+en algún sentido y, por lo tanto, como la forma de actuación que debe
+adoptarse. La facilidad o dificultad en la selección de la mejor
+decisión generalmente se debe al grado de incertidumbre presente en la
+situación.
 
 ### 1.2 Situaciones de decisión
 
 #### 1.2.1 Procesos de decisión bajo certeza o determinísticos
 
-Cuando el decisor dispone de información completa de los resultados que se lograrán con cada curso de acción, la elección de un único elemento del conjunto que lo acerque más rápido a la meta preestablecida es inmediata. Este tipo de procesos se resuelve con las técnicas determinísticas de la Investigación de Operaciones: Programación lineal, Inventarios determinísticos, etcétera.
+Cuando el decisor dispone de información completa de los resultados que
+se lograrán con cada curso de acción, la elección de un único elemento
+del conjunto que lo acerque más rápido a la meta preestablecida es
+inmediata. Este tipo de procesos se resuelve con las técnicas
+determinísticas de la Investigación de Operaciones: Programación lineal,
+Inventarios determinísticos, etcétera.
 
 #### 1.2.2 Procesos de decisión con riesgo, bajo incertidumbre o estocásticos
 
-Cuando el decisor no sabe exactamente lo que sucederá si adopta determinada forma de actuación, pero puede asignar una probabilidad de ocurrencia a los posibles eventos o estados de la naturaleza, seleccionará la acción que maximice la esperanza de acercarse a la meta propuesta. Las probabilidades asignadas a los estados de la naturaleza que miden la incertidumbre pueden ser objetivas (determinadas técnicamente o empíricamente) o subjetivas (las que reflejan los conocimientos o las creencias del decisor).
+Cuando el decisor no sabe exactamente lo que sucederá si adopta
+determinada forma de actuación, pero puede asignar una probabilidad de
+ocurrencia a los posibles eventos o estados de la naturaleza,
+seleccionará la acción que maximice la esperanza de acercarse a la meta
+propuesta. Las probabilidades asignadas a los estados de la naturaleza
+que miden la incertidumbre pueden ser objetivas (determinadas
+técnicamente o empíricamente) o subjetivas (las que reflejan los
+conocimientos o las creencias del decisor).
 
 #### 1.2.3 Procesos de decisión bajo completa incertidumbre
 
-Cuando el decisor desconoce la verosimilitud asociada a la ocurrencia de los posibles estados de la naturaleza, existen criterios no probabilísticos para elegir la acción que, por ejemplo, maximice la mínima ganancia o minimice el arrepentimiento máximo, entre otros.
+Cuando el decisor desconoce la verosimilitud asociada a la ocurrencia de
+los posibles estados de la naturaleza, existen criterios no
+probabilísticos para elegir la acción que, por ejemplo, maximice la
+mínima ganancia o minimice el arrepentimiento máximo, entre otros.
 
 #### 1.2.4 Procesos de decisión bajo conflicto
 
-En este caso existen al menos dos decisores o grupos diferentes de decisores, y los estados de la naturaleza obligan a que el logro de las metas de un grupo decisor reduzca simultáneamente las posibilidades de que el otro grupo alcance las suyas. Este tipo de procesos de decisión se estudia en la Teoría de Juegos no Cooperativos.
+En este caso existen al menos dos decisores o grupos diferentes de
+decisores, y los estados de la naturaleza obligan a que el logro de las
+metas de un grupo decisor reduzca simultáneamente las posibilidades de
+que el otro grupo alcance las suyas. Este tipo de procesos de decisión
+se estudia en la Teoría de Juegos no Cooperativos.
 
-La estadística clásica resuelve problemas de decisión bajo riesgo y de total incertidumbre, pero en este último caso solo si es posible experimentar; si no es posible la experimentación se utilizan otras técnicas y enfoques conocidos como *teoría de decisión estadística*. Un método de ella, la **teoría bayesiana de decisión**, resuelve problemas de decisión bajo riesgo o con total incertidumbre, con o sin experimentación, y con una función objetivo dada en unidades monetarias o de utilidad.
+La estadística clásica resuelve problemas de decisión bajo riesgo y de
+total incertidumbre, pero en este último caso solo si es posible
+experimentar; si no es posible la experimentación se utilizan otras
+técnicas y enfoques conocidos como *teoría de decisión estadística*. Un
+método de ella, la **teoría bayesiana de decisión**, resuelve problemas
+de decisión bajo riesgo o con total incertidumbre, con o sin
+experimentación, y con una función objetivo dada en unidades monetarias
+o de utilidad.
 
 ### 1.3 ¿En qué consiste el problema de tomar una decisión?
 
-El proceso de decisión consiste en seleccionar una alternativa de una lista exhaustiva y exclusiva de *m* cursos de acción posibles, sin saber cuál de los elementos de una segunda lista de *n* estados de la naturaleza inciertos tendrá lugar, bajo el criterio de minimizar los riesgos de pérdidas financieras.
+El proceso de decisión consiste en seleccionar una alternativa de una
+lista exhaustiva y exclusiva de *m* cursos de acción posibles, sin saber
+cuál de los elementos de una segunda lista de *n* estados de la
+naturaleza inciertos tendrá lugar, bajo el criterio de minimizar los
+riesgos de pérdidas financieras.
 
-Cada curso de acción posible tiene una *consecuencia* o *resultado* que es una medida del beneficio neto que debe ser evaluado por el decisor. Las consecuencias dependen tanto de la decisión como del estado de la naturaleza que se presente, por lo que hay un resultado asociado a cada pareja ordenada (*estado de la naturaleza, acción*).
+Cada curso de acción posible tiene una *consecuencia* o *resultado* que
+es una medida del beneficio neto que debe ser evaluado por el decisor.
+Las consecuencias dependen tanto de la decisión como del estado de la
+naturaleza que se presente, por lo que hay un resultado asociado a cada
+pareja ordenada (*estado de la naturaleza, acción*).
 
 ### 1.4 Elementos de un acto de decisión
 
-1. Uno o más decisores (individuo, grupo, organización o sociedad) con objetivos y metas bien definidos.
+1.  Uno o más decisores (individuo, grupo, organización o sociedad) con
+    objetivos y metas bien definidos.
 
-2. Un conjunto de posibles acciones que pueden tomarse para resolver el problema de decisión.
+2.  Un conjunto de posibles acciones que pueden tomarse para resolver el
+    problema de decisión.
 
-3. Un conjunto de posibles estados de la naturaleza relacionados con los objetivos del decisor, sobre los que no ejerce control alguno.
+3.  Un conjunto de posibles estados de la naturaleza relacionados con
+    los objetivos del decisor, sobre los que no ejerce control alguno.
 
-4. Un conjunto de consecuencias asociadas con la instrumentación de cada acción ante cada estado de la naturaleza que puede ocurrir, es decir, una *función de consecuencias* que liga acciones y resultados con el entorno.
+4.  Un conjunto de consecuencias asociadas con la instrumentación de
+    cada acción ante cada estado de la naturaleza que puede ocurrir, es
+    decir, una *función de consecuencias* que liga acciones y resultados
+    con el entorno.
 
-5. Un proceso de decisión que, bajo un criterio específico, selecciona una o varias acciones dados un entorno y las metas explícitas del decisor.
+5.  Un proceso de decisión que, bajo un criterio específico, selecciona
+    una o varias acciones dados un entorno y las metas explícitas del
+    decisor.
 
 ### 1.5 Matriz de decisión o matriz de pagos
 
-Las consecuencias de cada pareja (*estado de la naturaleza, acción*) se representan en una matriz de dos entradas. Los resultados se determinan por medio de la *función de consecuencias o función de resultados* que se deriva de cada situación en particular.
+Las consecuencias de cada pareja (*estado de la naturaleza, acción*) se
+representan en una matriz de dos entradas. Los resultados se determinan
+por medio de la *función de consecuencias o función de resultados* que
+se deriva de cada situación en particular.
 
-**Ejemplo 1**
-En el transcurso del mes de enero de cada año, el propietario de una tienda de artículos deportivos debe enviar a uno de sus proveedores el pedido de playeras de verano. La cantidad solicitada debe hacerla en lotes de 100 prendas y el precio varía de la siguiente manera: si pide 100 playeras el costo es de $100 por prenda; si pide 200 el costo baja a $90 y si solicita 300 o más el costo será de $85. El precio al público de cada playera es de $120, pero al final del verano lo que no se vendió se remata a la mitad de precio.
+**Ejemplo 1** En el transcurso del mes de enero de cada año, el
+propietario de una tienda de artículos deportivos debe enviar a uno de
+sus proveedores el pedido de playeras de verano. La cantidad solicitada
+debe hacerla en lotes de 100 prendas y el precio varía de la siguiente
+manera: si pide 100 playeras el costo es de \$100 por prenda; si pide
+200 el costo baja a \$90 y si solicita 300 o más el costo será de \$85.
+El precio al público de cada playera es de \$120, pero al final del
+verano lo que no se vendió se remata a la mitad de precio.
 
-Él supone que la demanda será de 100, 150 o 200 prendas, sin embargo, por cada playera que un cliente solicite y no pueda adquirir, tendrá una pérdida de $5 de su buen nombre. Debido al tiempo de entrega, el pedido se debe colocar en una sola ocasión.
+Él supone que la demanda será de 100, 150 o 200 prendas, sin embargo,
+por cada playera que un cliente solicite y no pueda adquirir, tendrá una
+pérdida de \$5 de su buen nombre. Debido al tiempo de entrega, el pedido
+se debe colocar en una sola ocasión.
 
 Identificar los elementos del problema y determinar la matriz de pagos.
 
-**Solución**
-**Elementos del problema:**
+**Solución** **Elementos del problema:**
 
-| Elemento                 | Descripción                                        |
-|--------------------------|----------------------------------------------------|
-| Decisor                  | El propietario de la tienda                        |
-| Cursos de acción posibles| $a_{1}$ $\approx$ pedir 100 prendas<br>$a_{2}$ $\approx$ pedir 200 prendas |
-| Estados de la naturaleza | $\theta_{1}$ $\approx$ demanda de 100 prendas<br>$\theta_{2}$ $\approx$ demanda de 150 prendas<br>$\theta_{3}$ $\approx$ demanda de 100 prendas |
-| Función de consecuencias | Pago asociado con cada par ($\theta_{i}$, $\theta_{j}$) |
+| Elemento                  | Descripción                                                                                                                                     |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Decisor                   | El propietario de la tienda                                                                                                                     |
+| Cursos de acción posibles | $a_{1}$ $\approx$ pedir 100 prendas<br>$a_{2}$ $\approx$ pedir 200 prendas                                                                      |
+| Estados de la naturaleza  | $\theta_{1}$ $\approx$ demanda de 100 prendas<br>$\theta_{2}$ $\approx$ demanda de 150 prendas<br>$\theta_{3}$ $\approx$ demanda de 100 prendas |
+| Función de consecuencias  | Pago asociado con cada par ($\theta_{i}$, $\theta_{j}$)                                                                                         |
 
-La función de consecuencias depende de la cantidad de playeras pedidas y de la cantidad vendida:
-a. Si la demanda es igual al pedido, el resultado está dado por
+La función de consecuencias depende de la cantidad de playeras pedidas y
+de la cantidad vendida: a. Si la demanda es igual al pedido, el
+resultado está dado por
 
 $$
 \text{Ganancia} = \text{precio de venta} - \text{precio de compra}
 $$
 
-b. Si la demanda es menor que el pedido, el resultado se obtiene al calcular:
-$$
-[(\text{demanda}) 
-(\text{ganancia})] + \text{pedido} - \text{demanda})  (\text{precio de remate} - \text{precio de compra})
-$$
+b.  Si la demanda es menor que el pedido, el resultado se obtiene al
+    calcular: $$
+    [(\text{demanda}) 
+    (\text{ganancia})] + \text{pedido} - \text{demanda})  (\text{precio de remate} - \text{precio de compra})
+    $$
 
-c. Y si la demanda es mayor que el pedido:
-$$
-(\text{pedido} \times \text{ganancia}) - (5 \times (\text{demanda} - \text{pedido}))
-$$
+c.  Y si la demanda es mayor que el pedido: $$
+    (\text{pedido} \times \text{ganancia}) - (5 \times (\text{demanda} - \text{pedido}))
+    $$
 
-**Matriz de resultados (matriz de pagos, matriz de consecuencias, matriz de decisión):**
+**Matriz de resultados (matriz de pagos, matriz de consecuencias, matriz
+de decisión):**
 
 | Acción (pedido)<br>Estado de la naturaleza (demanda) | $a_{1}$<br>100 | $a_{2}$<br>100 |
 |:----------------------------------------------------:|:--------------:|:--------------:|
-|                   $\theta_{1}$=100                   |      2,000     |        0       |
-|                   $\theta_{2}$=150                   |      1,750     |      3,000     |
-|                   $\theta_{3}$=200                   |      1,500     |      6,000     |
+|                   $\theta_{1}$=100                   |     2,000      |       0        |
+|                   $\theta_{2}$=150                   |     1,750      |     3,000      |
+|                   $\theta_{3}$=200                   |     1,500      |     6,000      |
 
 ### 1.6 Dominación
-]
-Una acción está dominada por otra si los resultados de su implementación son al menos tan deseables como los resultados de otra acción pero, para al menos un estado de la naturaleza, es menos deseable. En tal caso, la acción es inadmisible y, por lo tanto, se puede eliminar de la lista de posibles decisiones sin afectar el resultado del proceso de decisión.
 
-En el ejemplo 1 se observa que la estrategia $a_{3}$ está dominada por la estrategia $a_{2}$:
+] Una acción está dominada por otra si los resultados de su
+implementación son al menos tan deseables como los resultados de otra
+acción pero, para al menos un estado de la naturaleza, es menos
+deseable. En tal caso, la acción es inadmisible y, por lo tanto, se
+puede eliminar de la lista de posibles decisiones sin afectar el
+resultado del proceso de decisión.
 
-|    Acción<br>Estado de la naturaleza | $a_{1}$ | $a_{2}$ |
-|:------------------------------------:|:-------:|:-------:|
-|             $\theta_{1}$             |    0    |  -1,500 |
-|             $\theta_{2}$             |   3,000  |   1,500 |
-|             $\theta_{3}$             |   6,000  |   4,500 |
+En el ejemplo 1 se observa que la estrategia $a_{3}$ está dominada por
+la estrategia $a_{2}$:
 
-Por lo tanto, la estrategia $a_{3}$ no es admisible y se elimina de la matriz de pagos. Es recomendable analizar siempre si existen estrategias dominadas en una matriz de pagos y, de ser así, eliminarlas antes de iniciar el proceso de toma de decisión.
+| Acción<br>Estado de la naturaleza | $a_{1}$ | $a_{2}$ |
+|:---------------------------------:|:-------:|:-------:|
+|           $\theta_{1}$            |    0    | -1,500  |
+|           $\theta_{2}$            |  3,000  |  1,500  |
+|           $\theta_{3}$            |  6,000  |  4,500  |
 
-La matriz de pagos que se utilizará para tomar la decisión del tamaño del pedido de playeras es:
+Por lo tanto, la estrategia $a_{3}$ no es admisible y se elimina de la
+matriz de pagos. Es recomendable analizar siempre si existen estrategias
+dominadas en una matriz de pagos y, de ser así, eliminarlas antes de
+iniciar el proceso de toma de decisión.
+
+La matriz de pagos que se utilizará para tomar la decisión del tamaño
+del pedido de playeras es:
 
 | Acción (pedido)<br>Estado de la naturaleza (demanda) | $a_{1}$<br>100 | $a_{2}$<br>200 |
 |:----------------------------------------------------:|:--------------:|:--------------:|
-|                   $\theta_{1}$=100                   |      2,000     |        0       |
-|                   $\theta_{2}$=150                   |      1,750     |      3,000     |
-|                   $\theta_{3}$=200                   |      1,500     |      6,000     |
-
+|                   $\theta_{1}$=100                   |     2,000      |       0        |
+|                   $\theta_{2}$=150                   |     1,750      |     3,000      |
+|                   $\theta_{3}$=200                   |     1,500      |     6,000      |
