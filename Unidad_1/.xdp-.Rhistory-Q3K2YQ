@@ -1,0 +1,9 @@
+install.packages("stringr")
+library(htmltools)
+library(jquerylib)
+library(htmltools, lib.loc = "/usr/local/lib/R/library")
+library(jquerylib, lib.loc = "/usr/local/lib/R/library")
+clear
+c
+cls
+install.packages("tidyverse")
